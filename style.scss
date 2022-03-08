@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import './Variabels.scss';
+
+body {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__header {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    font-family: $font;
+
+    h1 {
+      color: hsl(179, 62%, 43%);
+    }
+    h2 {
+      color: hsl(71, 73%, 54%);
+    }
+    h3 {
+      color: hsl(202, 6%, 66%);
+    }
+  }
+
+  &__sub {
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
+    background-color: hsl(179, 62%, 43%);
+    font-family: $font;
+
+    h1 {
+      display: inline-block;
+      color: white;
+    }
+
+    &__price {
+        display: flex;
+        gap: 10px;
+      span {
+        display: inline-block;
+        color: white;
+        font-size: 35px;
+      }
+      p {
+        color: rgba(255, 255, 255, 0.308);
+      }
+    }
+    h2 {
+      color: rgba(255, 255, 255, 0.616);
+    }
+    button {
+      align-self: center;
+      margin-top: 5vh;
+      border: none;
+      width: 70%;
+      height: 10vh;
+      border-radius: 10px;
+      background-color: rgb(155, 212, 69);
+      font-size: large;
+      color: white;
+      font-family: $font;
+
+      &:hover {
+          background-color: rgba(155, 212, 69, 0.658);
+          cursor: pointer;
+      }
+    }
+  }
+
+  &__why {
+    background-color: hsl(179, 42%, 51%);
+    padding: 4%;
+    font-family: $font;
+
+    h1 {
+      color: white;
+    }
+    h2 {
+      color: rgba(255, 255, 255, 0.616);
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+
+    &__header {
+      grid-column: 1;
+    }
+    &__sub {
+      grid-column: 1;
+    }
+    &__why {
+      grid-column: 1;
+    }
+  }
+}
