@@ -110,7 +110,7 @@ body {
   color: rgba(255, 255, 255, 0.616);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .grid {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
